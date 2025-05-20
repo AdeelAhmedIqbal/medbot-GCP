@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3001:80"
+    depends_on:
+      - gateway
+
+  gateway:
+    build: ./gateway-service
+    environment:
+      - INFERENCE_API_URL=https://7cf4-34-13-167-131.ngrok-free.app/
+    ports:
+      - "8080:8080"
