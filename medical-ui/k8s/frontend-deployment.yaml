@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: adeel2k01/medical-ui:latest
+          image: us-central1-docker.pkg.dev/swift-hope-460410-d5/my-docker-repo/adeel2k01/medical-ui
           ports:
             - containerPort: 80
       resources:
@@ -24,16 +24,4 @@ spec:
           limits:
             cpu: "300m"
             memory: "512Mi"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: frontend-service
-spec:
-  selector:
-    app: frontend
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-  type: LoadBalancer  # or LoadBalancer if on cloud
+
