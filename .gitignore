@@ -1,0 +1,11 @@
+# Ignore logs, system files, IDE settings
+*.log
+*.tmp
+*.swp
+.DS_Store
+.vscode/
+.codeoss/
+.bash*
+*.env
+node_modules/
+__pycache__/
