@@ -12,6 +12,7 @@ spec:
       labels:
         app: frontend
     spec:
+      serviceAccountName: frontend-sa
       containers:
         - name: frontend
           image: us-central1-docker.pkg.dev/swift-hope-460410-d5/my-docker-repo/adeel2k01/medical-ui

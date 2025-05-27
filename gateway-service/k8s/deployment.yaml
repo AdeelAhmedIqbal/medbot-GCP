@@ -14,6 +14,7 @@ spec:
       labels:
         app: gateway
     spec:
+      serviceAccountName: gateway-sa
       containers:
       - name: gateway-container
         image: us-central1-docker.pkg.dev/swift-hope-460410-d5/my-docker-repo/adeel2k01/gateway-service
